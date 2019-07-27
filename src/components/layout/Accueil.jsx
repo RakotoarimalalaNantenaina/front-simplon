@@ -15,7 +15,7 @@ class Accueil extends Component {
             <div className="py-5">
               <h2 id="h2accueil">ATELIER DE CUISINE</h2>
               <p className="mb-4 pb-2 px-md-5 mx-md-5"><span id="spanheader">Comment avoir une formation de bonne cuisinier ??</span> 
-              <br/><br/>Des personnes entre 25 à 35 ans qui veulent apprendre à  cuisiner afin de manger correctement.
+              <br/><br/>Des personnes qui veulent apprendre à  cuisiner afin de manger correctement.
               </p>
               <a className="btn peach-gradient" href="#!" id="boutton-accueil"><i class="fas fa-clone left"></i>Voir tous les ateliers</a>
             </div>
