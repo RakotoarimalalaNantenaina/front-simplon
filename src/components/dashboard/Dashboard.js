@@ -59,6 +59,26 @@ class Dashboard extends Component {
         </MDBNavbar>
 
 
+      
+                <ul class="navbar-nav mr-auto" id="navbarmobile">
+                  <li class="nav-item active">
+                  <button id="li1"  className="btn btn-primary" onClick={()=>{
+                          document.getElementById('ajoutercomponent').style.display = 'none'
+                          this.get()
+                        }} href="#">listes de vos ateliers</button>
+                  </li>
+                  <li class="nav-item active">
+                  <button id="li1" className="btn btn-primary"  onClick={()=>{
+                          document.getElementById('ajoutercomponent').style.display = 'block'
+                          document.getElementById('listecomponent').style.display = 'none'
+
+                        }} href="#">Ajouter nouveau atelier</button>
+                  </li>
+                
+                </ul>
+            
+
+
             <div className="wrapper">
               <nav id="sidebar">
               <center>

@@ -99,7 +99,7 @@ class Atelier extends Component {
                                                                                 this.setState({ profil: res.data })
                                                                             })
                                                                         })
-                                                                      
+                                                                      onClose()
                                                                     }}
                                                                     className="btn btn-primary"     id="bouttonconfirmer" >
                                                                     Confirmer

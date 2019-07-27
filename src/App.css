@@ -178,6 +178,9 @@ td {
    #ajoutercomponent {
     display: initial;
 }
+    #navbarmobile {
+        display: block !important;
+    }
   }
 
 #ajoutercomponent {
@@ -247,4 +250,14 @@ footer {
     height: 40px;
     line-height: 50%;
     border-radius: 15px;
+}
+#navbarmobile {
+    display: none;
+}
+#mobilegetatelier {
+    display: none !important;
+}
+#at {
+    color: white;
+    font-weight: bold
 }
