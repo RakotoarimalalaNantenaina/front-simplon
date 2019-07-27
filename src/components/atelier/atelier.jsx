@@ -44,12 +44,12 @@ class Atelier extends React.Component {
     data.append('place_reserve',this.state.place_reserve);
     data.append('prix',this.state.prix);
   
-    fetch('https://boiling-dawn-95363.herokuapp.com/atelier', {
+    fetch('http://localhost:8080/atelier', {
       method: 'POST',
       body: data,
     }).then((response) => {
       response.json().then((body) => {
-        this.setState({ photo_produit: `https://boiling-dawn-95363.herokuapp.com/atelier/${body.photo_produit}` });
+        this.setState({ photo_produit: `http://localhost:8080/atelier/${body.photo_produit}` });
         console.log('ity ilay body.fil',body.photo_produit);
         
       });
