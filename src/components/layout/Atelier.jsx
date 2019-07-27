@@ -25,7 +25,7 @@ class Atelier extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://boiling-dawn-95363.herokuapp.com/atelier')
+        axios.get('http://localhost:8080/atelier')
             .then(response => {
                 this.setState({ profil: response.data });
             })

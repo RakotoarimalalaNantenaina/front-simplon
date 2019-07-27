@@ -12,7 +12,7 @@ export default class Tableau extends Component {
     }
     componentDidMount() {
        var test = []
-        axios.get('https://boiling-dawn-95363.herokuapp.com/atelier')
+        axios.get('http://localhost:8080/atelier')
             .then(response => {
                 for(let i=0; i<response.data.length; i++){
                     if(response.data[i].id_user==localStorage.getItem('id_user')){
