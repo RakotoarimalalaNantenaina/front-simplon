@@ -38,13 +38,13 @@ handleUploadImage(ev) {
     data.append('place_reserve',this.state.place_reserve);
     data.append('prix',this.state.prix);
 
-  fetch('http://localhost:8080/modif/'+this.props.match.params.id, {
+  fetch('https://boiling-dawn-95363.herokuapp.com/atelier/'+ this.props.match.params.id, {
     method: 'PUT',
     body: data,
   }).then((response) => {
       
     response.json().then((body) => {
-      this.setState({ photo_produit: `http://localhost:8080/atelier/${body.photo_produit}` });
+      this.setState({ image: `https://boiling-dawn-95363.herokuapp.com/atelier/${body.photo_produit}` });
       console.log('ity ilay body. photo ovaina o :', body.photo_produit);
 
     });
