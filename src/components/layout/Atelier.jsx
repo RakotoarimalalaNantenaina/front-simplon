@@ -33,6 +33,9 @@ class Atelier extends Component {
                 console.log(error);
             })
     }
+    Inscrit(){
+        
+    }
 
 
     Produit() {
@@ -82,6 +85,7 @@ class Atelier extends Component {
                                                                 </div>
 
                                                                 <h2 id="h2popups">S'inscrire de l'atelier : {user.titre}</h2>
+                                                                
                                                                 <input required className="zonetext2" name="nom" onChange={this.onChange} value={this.state.value} placeholder="Entrer votre nom" /><br></br>
                                                                 <input required className="zonetext2" name="prenom" placeholder="Entre votre prénom" onChange={this.onChange} value={this.state.value} /><br></br>
                                                                 <input required className="zonetext2" name="email" placeholder="Entrer votre e-mail" onChange={this.onChange} value={this.state.value} /><br></br>
