@@ -1,5 +1,7 @@
 import React from 'react';
 import { MDBIcon,MDBCol,MDBInput,MDBCard, MDBCardBody} from "mdbreact";
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css'; 
 
 class Modifatelier extends React.Component {
   constructor(props){
@@ -134,7 +136,18 @@ handleUploadImage(ev) {
                  </div>
                  <div className="text-center">
                  <div className="text-center mt-4">
-               <button className="btn btn-outline-warning" type="submit" id="ajouter_boutton">
+               <button className="btn btn-outline-warning" type="submit" id="ajouter_boutton" onClick={()=>{
+                  confirmAlert({
+                    customUI: () => {
+                      return (
+                        <div className='custom-ui'>
+                          <h1>Enregistrement De la modification</h1>
+                          <center></center><a href="/dashboard" id="okajout" className="btn btn-primary">OK</a>
+                        </div>
+                      );
+                    }
+                  });
+                }}>
                     Modifier
                  <MDBIcon icon="paper-plane" className="ml-2" />
                </button>
