@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import Atelier from './../atelier/atelier';
 import Getatelier from './../atelier/getatelier'
+import { Link } from 'react-router-dom'
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse } from "mdbreact";
 
 
@@ -74,10 +75,13 @@ class Dashboard extends Component {
 
                         }} href="#">Ajouter nouveau atelier</button>
                   </li>
-                
+                  <li class="nav-item active">
+                    <Link to="/"><span id="btn-accueil" >Accueil</span></Link>
+                  </li>
+                 
                 </ul>
             
-
+                
 
             <div className="wrapper">
               <nav id="sidebar">
@@ -93,7 +97,9 @@ class Dashboard extends Component {
                         <button id="li1"  className="btn btn-primary" onClick={()=>{
                           document.getElementById('ajoutercomponent').style.display = 'none'
                           this.get()
-                        }} href="#">listes de vos ateliers</button>
+                        }} href="#">listes de vos ateliers</button><br/>
+                         <Link to="/" id="btn-accueil">Accueil</Link>
+
                   </div>
                   </center>
               </nav>

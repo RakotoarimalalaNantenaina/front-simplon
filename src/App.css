@@ -264,3 +264,10 @@ footer {
     color: white;
     font-weight: bold
 }
+#btn-accueil {
+   font-size: 20px;
+   font-weight: bold;
+}
+#btn-accueil:hover {
+    color: #f3671f !important;
+}
