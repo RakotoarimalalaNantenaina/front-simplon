@@ -181,6 +181,9 @@ td {
     #navbarmobile {
         display: block !important;
     }
+    #carte {
+        padding: 0px !important;
+    }
   }
 
 #ajoutercomponent {
