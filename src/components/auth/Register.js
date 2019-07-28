@@ -4,13 +4,15 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
-import { MDBRow, MDBCol, MDBInput, MDBBtn} from "mdbreact";
+import { MDBRow, MDBCol, MDBInput, MDBBtn } from "mdbreact";
 
 class Register extends Component {
   constructor() {
     super();
     this.state = {
       name: "",
+      lastname: "",
+      specialite: "",
       email: "",
       password: "",
       password2: "",
@@ -42,6 +44,8 @@ class Register extends Component {
 
     const newUser = {
       name: this.state.name,
+      lastname: this.state.lastname,
+      specialite: this.state.specialite,
       email: this.state.email,
       password: this.state.password,
       password2: this.state.password2
@@ -55,86 +59,114 @@ class Register extends Component {
 
     return (
       <div className="container-fluid">
-      
-      <div className="row">
-        <div className="col-md-4"></div>
-        <div className="col-md-4" id="loginrow">
-        <MDBRow>
-          <MDBCol md="12">
-            <form noValidate onSubmit={this.onSubmit}>
-              <p className="h5 text-center mb-4" id="loginp">S'inscrire</p>
-              <div className="grey-text">
-                <MDBInput
-                  label="Votre nom"
-                  icon="envelope"
-                  group
-                  onChange={this.onChange}
-                  value={this.state.name}
-                  id="name"
-                  type="text"
-                  className={classnames("", {
-                    invalid: errors.name
-                  })}
-                  required
-                />
 
-                <MDBInput
-                  label="Votre adresse e-mail"
-                  icon="envelope"
-                  group
-                  type="email"
-                  success="right"
-                  id="email"
-                  onChange={this.onChange}
-                  value={this.state.email}
-                
-                  className={classnames("", {
-                    invalid: errors.email
-                  })}
-                  required
-                />
+        <div className="row">
+          <div className="col-md-4"></div>
+          <div className="col-md-4" id="loginrow">
+            <MDBRow>
+              <MDBCol md="12">
+                <form noValidate onSubmit={this.onSubmit}>
+                  <p className="h5 text-center mb-4" id="loginp">S'inscrire</p>
+                  <div className="grey-text">
+                    <MDBInput
+                      label="Votre nom"
+                      icon="envelope"
+                      group
+                      onChange={this.onChange}
+                      value={this.state.name}
+                      id="name"
+                      type="text"
+                      className={classnames("", {
+                        invalid: errors.name
+                      })}
+                      required
+                    />
 
-                
-                <MDBInput
-                  label="Votre mot de passe"
-                  icon="lock"
-                  group
-                  type="password"
-                  onChange={this.onChange}
-                  value={this.state.password}
-                 
-                  id="password"
-                  className={classnames("", {
-                    invalid: errors.password
-                  })}
-                  required
-                />
-                 <MDBInput
-                  label="Confirmer votre mot de passe"
-                  icon="lock"
-                  group
-                  type="password"
-                  onChange={this.onChange}
-                  value={this.state.password2}
-                  
-                  id="password2"
-                  className={classnames("", {
-                    invalid: errors.password2
-                  })}
-                  required
-                />
-                 
-              </div>
-              <div className="text-center">
-                <MDBBtn type="submit" id="bouton-connecter">S'inscrire</MDBBtn>
-              </div><br/>
-            </form>
-                  <p>J'ai deja un compte sur l' AT-C &nbsp; <Link to="/login" id="linkseconnecter"> Se connecter</Link></p> 
-          </MDBCol>
-        </MDBRow>
+                    <MDBInput
+                      label="Votre prenom"
+                      icon="envelope"
+                      group
+                      onChange={this.onChange}
+                      value={this.state.lastname}
+                      id="lastname"
+                      type="text"
+                      className={classnames("", {
+                        invalid: errors.lastname
+                      })}
+                      required
+                    />
+
+                    <MDBInput
+                      label="Votre specialité"
+                      icon="envelope"
+                      group
+                      onChange={this.onChange}
+                      value={this.state.specialite}
+                      id="specialite"
+                      type="text"
+                      className={classnames("", {
+                        invalid: errors.specialite
+                      })}
+                      required
+                    />
+
+                    <MDBInput
+                      label="Votre adresse e-mail"
+                      icon="envelope"
+                      group
+                      type="email"
+                      success="right"
+                      id="email"
+                      onChange={this.onChange}
+                      value={this.state.email}
+
+                      className={classnames("", {
+                        invalid: errors.email
+                      })}
+                      required
+                    />
+
+
+                    <MDBInput
+                      label="Votre mot de passe"
+                      icon="lock"
+                      group
+                      type="password"
+                      onChange={this.onChange}
+                      value={this.state.password}
+
+                      id="password"
+                      className={classnames("", {
+                        invalid: errors.password
+                      })}
+                      required
+                    />
+                    <MDBInput
+                      label="Confirmer votre mot de passe"
+                      icon="lock"
+                      group
+                      type="password"
+                      onChange={this.onChange}
+                      value={this.state.password2}
+
+                      id="password2"
+                      className={classnames("", {
+                        invalid: errors.password2
+                      })}
+                      required
+                    />
+
+                  </div>
+                  <div className="text-center">
+                    <MDBBtn type="submit" id="bouton-connecter">S'inscrire</MDBBtn>
+                  </div><br />
+                </form>
+                <p>J'ai deja un compte sur l' AT-C &nbsp; <Link to="/login" id="linkseconnecter"> Se connecter</Link></p>
+              </MDBCol>
+            </MDBRow>
+          </div>
+          <div className="col-md-4"></div>
         </div>
-        <div className="col-md-4"></div>
-    </div>
       </div>
     );
   }
